@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+
+import AppWrapper from "./AppWrapper";
 import ThemeRegistry from "./theme/ThemeRegistry";
 
 export const metadata: Metadata = {
@@ -14,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <AppWrapper>{children}</AppWrapper>
+        </ThemeRegistry>
       </body>
     </html>
   );
