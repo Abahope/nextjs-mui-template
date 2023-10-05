@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import AppWrapper from "./AppWrapper";
+import ErrorFallback from "./ErrorFallback";
 import ThemeRegistry from "./theme/ThemeRegistry";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <AppWrapper>{children}</AppWrapper>
+          <AppWrapper errorFallback={<ErrorFallback />}>{children}</AppWrapper>
         </ThemeRegistry>
       </body>
     </html>
