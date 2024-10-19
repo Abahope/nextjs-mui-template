@@ -1,5 +1,7 @@
 import { Container, Stack, Typography } from "@mui/material";
 
+import ThrowErrorButton from "./ThrowErrorButton";
+
 export default function Home() {
   return (
     <main>
@@ -9,6 +11,7 @@ export default function Home() {
           <Typography variant="h6" component="span">
             Edit page.tsx
           </Typography>
+          <ThrowErrorButton />
         </Stack>
       </Container>
     </main>
